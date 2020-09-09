@@ -13,6 +13,7 @@
   padding-bottom: 20px;
   padding-right: 35px;
   padding-left: 20px;
+  transition: all 0.2s ease;
 
   .left-block {
     margin-right: auto;
@@ -204,4 +205,19 @@
       display: block;
     }
   }
+}
+
+.navbar-bg {
+  background-color: rgba(185, 185, 185, 0.70);
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.navbar-bg .right-block {
+  background-color: unset;
+}
+
+.navbar-bg .dropdown-list {
+  top: 55px;
+  background-color: rgba(185, 185, 185, 0.70);
 }

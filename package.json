@@ -1,11 +1,12 @@
 {
 	"name": "gulp-template",
 	"version": "v1.1.2",
-	"author": "Vladimir Banduristov <hello@webzlodimir.ru>",
+	"author": "Oleksandr",
 	"license": "MIT",
 	"scripts": {
 		"start": "gulp",
-		"build": "gulp build --production true"
+		"build": "gulp build --production true",
+		"deploy": "gulp deploy"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.4.3",
@@ -20,6 +21,7 @@
 		"gulp-changed": "^3.2.0",
 		"gulp-cli": "^2.0.1",
 		"gulp-concat": "^2.6.1",
+		"gulp-gh-pages": "^0.5.4",
 		"gulp-hash-src": "^0.1.6",
 		"gulp-jsbeautifier": "^3.0.1",
 		"gulp-postcss": "^8.0.0",

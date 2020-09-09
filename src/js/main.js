@@ -16,3 +16,13 @@ jQuery(function($){
       }
   });
 });
+
+// Fixed header
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+    document.getElementById("navbar").className = ('new-blog-nav navbar-bg');
+  } else {
+    document.getElementById("navbar").className = ('new-blog-nav');
+  }
+}

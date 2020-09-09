@@ -22,6 +22,14 @@ const richtypo = require('posthtml-richtypo');
 const expressions = require('posthtml-expressions');
 const removeAttributes = require('posthtml-remove-attributes');
 const { quotes, sectionSigns, shortWords } = require('richtypo-rules-ru');
+const ghPages = require('gulp-gh-pages');
+
+
+// Deploy
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 
 /**
  * Основные переменные
