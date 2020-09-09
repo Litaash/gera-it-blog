@@ -1,0 +1,207 @@
+.new-blog-nav {
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-right: 35px;
+  padding-left: 20px;
+
+  .left-block {
+    margin-right: auto;
+
+    .brand {
+      display: block;
+      width: 164px;
+      height: 50px;
+      background-image: url('../img/logo.svg');
+      background-position: 50% 50%;
+      background-size: 158px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .right-block {
+    background-color: rgba(0,0,0,.35);
+    transition: all 0.2s ease;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 6px 8px 8px 6px;
+    -webkit-transform: skew(-33deg,0deg);
+    -ms-transform: skew(-33deg,0deg);
+    transform: skew(-33deg,0deg);
+    color: #fff;
+
+    .dropdown {
+      position: relative;
+      transform: skew(33deg,0deg);
+    }
+
+    .nav-item {
+      display: block;
+      transform: skew(33deg,0deg);
+      user-select: none;
+      cursor: pointer;
+      padding: 12px 15px;
+      background-color: transparent;
+      font-family: 'Archivo', sans-serif;
+      font-size: 17px;
+      line-height: 19px;
+      font-weight: 500;
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-item {
+      &:before {
+        left: 15px;
+      }
+
+      &:hover:before {
+        right: 15px;
+      }
+    }
+
+    .hire-us-btn {
+      background-color: #ff7000;
+      transition: all 0.2s ease;
+      transform: skew(0deg);
+      border-radius: 6px 8px 8px 6px;
+      margin-left: 16px;
+      padding-right: 16px;
+
+      &:before {
+        display: none;
+      }
+
+      span {
+        display: block;
+        transform: skew(33deg);
+      }
+    }
+
+    .dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      position: relative;
+      overflow: hidden;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      user-select: none;
+      cursor: pointer;
+      padding-left: 20px;
+      padding-right: 22px;
+
+      .fa-angle-down {
+        margin-left: 8px;
+        font-weight: 800;
+      }
+    }
+
+    .dropdown-title {
+      background-color: transparent;
+      font-family: 'Archivo', sans-serif;
+      font-size: 17px;
+      line-height: 19px;
+      font-weight: 500;
+    }
+  }
+
+  .dropdown-list {
+    width: 100%;
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,.35);
+    border-radius: 0px 0px 6px 6px;
+
+    .dropdown-item {
+      display: inline-block;
+      text-decoration: none;
+      padding: 13px 0;
+      padding-left: 31px;
+      background-color: transparent;
+      font-family: 'Archivo', sans-serif;
+      font-size: 17px;
+      line-height: 20px;
+      font-weight: 500;
+      color: white;
+      position: relative;
+
+      &:before {
+        z-index: 0;
+        left: 20px;
+      }
+
+      &:hover:before {
+        right: 20px;
+      }
+    }
+  }
+
+  .services-list {
+    margin-left: -11px;
+    width: 215px;
+
+    .dropdown-item {
+      &:before {
+        left: 31px;
+      }
+
+      &:hover:before {
+        right: 0px;
+      }
+    }
+  }
+
+  .company-list, .technologies-list {
+    .dropdown-item {
+      padding: 10px 20px !important;
+    }
+  }
+
+  .open {
+    .dropdown-list {
+      display: block;
+    }
+  }
+
+  .hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 21px;
+    right: 100%;
+    bottom: 10px;
+    background: #fff;
+    height: 2px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+
+  .hvr-underline-from-left:hover:before {
+    right: 39px;
+  }
+
+  .dropdown-list {
+    a {
+      display: block;
+    }
+  }
+}
