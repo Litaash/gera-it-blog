@@ -3,38 +3,33 @@
  * Документация: https://imask.js.org/guide.html
  */
 function initPhoneMask() {
-  $('input[type=tel]').each(function(index, element) {
+  $('input[type=tel]').each(function (index, element) {
     var mask = IMask(element, {
-      mask: [
-        {
-          mask: '+7 (000) 000-00-00',
-          startsWith: '+7',
-          country: 'Russia',
-        },
-        {
-          mask: '+7 (000) 000-00-00',
-          startsWith: '7',
-          country: 'Russia',
-        },
-        {
-          mask: '0 (000) 000-00-00',
-          startsWith: '8',
-          country: 'Russia',
-        },
-        {
-          mask: '+7 (000) 000-00-00',
-          startsWith: '',
-          country: 'unknown',
-        },
-      ],
+      mask: [{
+        mask: '+7 (000) 000-00-00',
+        startsWith: '+7',
+        country: 'Russia'
+      }, {
+        mask: '+7 (000) 000-00-00',
+        startsWith: '7',
+        country: 'Russia'
+      }, {
+        mask: '0 (000) 000-00-00',
+        startsWith: '8',
+        country: 'Russia'
+      }, {
+        mask: '+7 (000) 000-00-00',
+        startsWith: '',
+        country: 'unknown'
+      }],
       dispatch: function dispatch(appended, dynamicMasked) {
         var number = (dynamicMasked.value + appended).replace(/\D/g, '');
-        return dynamicMasked.compiledMasks.find(function(m) {
+        return dynamicMasked.compiledMasks.find(function (m) {
           return number.indexOf(m.startsWith) === 0;
         });
-      },
+      }
     });
-    $(this).blur(function() {
+    $(this).blur(function () {
       var maskValue = mask.unmaskedValue;
       var startWith = 10;
 
@@ -49,7 +44,7 @@ function initPhoneMask() {
   });
 }
 
-$(function() {
+$(function () {
   objectFitImages();
   initPhoneMask();
 });
