@@ -1,27 +1,8 @@
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #1a2331;
-
-  .container-large {
-    position: relative;
-    z-index: 10;
-    display: block;
-    width: 1120px;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    margin-right: auto;
-    margin-left: auto;
-  }
 
   .footer-content {
     display: flex;

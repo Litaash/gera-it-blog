@@ -6,6 +6,8 @@ $(document).ready(function(){
       $(this).closest('.dropdown').siblings().removeClass('open');
     });
   });
+
+
 });
 
 jQuery(function($){
@@ -26,3 +28,17 @@ function scrollFunction() {
     document.getElementById("navbar").className = ('new-blog-nav');
   }
 }
+
+//Сategory
+$('.result').click(function(){
+  $('.search-list').toggleClass('open-category-list');
+});
+
+jQuery(function($){
+  $(document).mouseup(function (e){
+      var result = $(".search-list");
+      if (!result.is(e.target) && result.has(e.target).length === 0) {
+        result.removeClass('open-category-list');
+      }
+  });
+});
