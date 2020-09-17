@@ -30,14 +30,15 @@ function scrollFunction() {
 }
 
 //Сategory
-$('.result').click(function(){
+$('.form-category').click(function(){
   $('.search-list').toggleClass('open-category-list');
 });
 
 jQuery(function($){
   $(document).mouseup(function (e){
       var result = $(".search-list");
-      if (!result.is(e.target) && result.has(e.target).length === 0) {
+      var parent = $('.form-category');
+      if (!result.is(e.target) && parent.has(e.target).length === 0 && result.has(e.target).length === 0) {
         result.removeClass('open-category-list');
       }
   });

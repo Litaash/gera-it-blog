@@ -325,3 +325,16 @@ html, body {
     background-color: #ff7a00;;
   }
 }
+
+
+.dropdown-search {
+  width: 100%;
+  padding-right: 15px;
+
+  .fa {
+    float: right;
+    padding-top: 4px;
+    font-weight: 800;
+    color: inherit;
+  }
+}
